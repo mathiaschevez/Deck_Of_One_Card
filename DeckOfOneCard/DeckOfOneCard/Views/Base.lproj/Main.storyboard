@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Card View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CardViewController" customModule="DeckOfOneCard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KOk-mM-3GA">
+                                <rect key="frame" x="87" y="389" width="240" height="128"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tgm-Ja-89X">
+                                <rect key="frame" x="87" y="202" width="240" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="7Wp-kQ-nme"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YeA-3R-q2j">
+                                <rect key="frame" x="184" y="665" width="46" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Draw"/>
+                                <connections>
+                                    <action selector="drawButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kVF-ih-1Zc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="tgm-Ja-89X" firstAttribute="trailing" secondItem="KOk-mM-3GA" secondAttribute="trailing" id="IRm-yU-vTo"/>
+                            <constraint firstItem="KOk-mM-3GA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Iot-lJ-mT3"/>
+                            <constraint firstItem="KOk-mM-3GA" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="PkQ-rW-Yr2"/>
+                            <constraint firstItem="YeA-3R-q2j" firstAttribute="centerX" secondItem="KOk-mM-3GA" secondAttribute="centerX" id="bya-jo-E8z"/>
+                            <constraint firstItem="tgm-Ja-89X" firstAttribute="leading" secondItem="KOk-mM-3GA" secondAttribute="leading" id="lqg-ym-My1"/>
+                            <constraint firstItem="KOk-mM-3GA" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.142857" id="qba-e9-hql"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YeA-3R-q2j" secondAttribute="bottom" constant="161" id="rum-oO-Mty"/>
+                            <constraint firstItem="tgm-Ja-89X" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="158" id="zDn-vQ-lvc"/>
+                            <constraint firstItem="KOk-mM-3GA" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.57971" id="zct-UQ-iUc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cardImageView" destination="KOk-mM-3GA" id="u07-Pe-p4x"/>
+                        <outlet property="cardValueLabel" destination="tgm-Ja-89X" id="aMn-cC-pN8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7.2463768115942031" y="99.776785714285708"/>
+        </scene>
+    </scenes>
+</document>
